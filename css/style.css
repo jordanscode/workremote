@@ -2,13 +2,23 @@
 :root{
   --maximum: 1280px;
   --bp-mobile: 768px;
+
+  --rounded: 12px;
 }
 
 .left {float: left;}
 .right {float: right;}
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  }
+  .clear {clear: both;}
 
 /* Colors */
 :root{
+  --white: #fff;
+  --black: #000;
+
   --beige-10: #FDFAF0;
   --beige-20: #F6F2E5;
   --beige-30: #E3E7BE;
@@ -33,6 +43,7 @@
   body {
     color: var(--gray-70);
     font-weight: 400;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
   }
 
   .align-left {text-align: left;}
@@ -41,31 +52,45 @@
 
   .text-xxxxl{
     font-size: 64px;
-    line-height: normal;
+    line-height: 80px;
+    letter-spacing: 0.48px;
+    font-family: "SF Pro Display";
   }
   .text-xxxl{
     font-size: 48px;
-    line-height: normal;
+    line-height: 64px;
+    letter-spacing: 0.48px;
+    font-family: "SF Pro Display";
   }
   .text-xxl{
     font-size: 36px;
-    line-height: normal;
+    line-height: 48px;
+    letter-spacing: 0.48px;
+    font-family: "SF Pro Display";
   }
   .text-xl{
     font-size: 28px;
-    line-height: normal;
+    line-height: 36px;
+    letter-spacing: 0.36px;
+    font-family: "SF Pro Display";
   }
   .text-l{
     font-size: 20px;
-    line-height: normal;
+    line-height: 28px;
+    letter-spacing: -0.28px;
+    font-family: "SF Pro Display";
   }
   .text-body{
     font-size: 16px;
-    line-height: normal;
+    line-height: 20px;
+    letter-spacing: -0.13px;
+    font-family: "SF Pro Display";
   }
   .text-s{
     font-size: 14px;
-    line-height: normal;
+    line-height: 20px;
+    letter-spacing: -0.15px;
+    font-family: "SF Pro Display";
   }
 
   .header {
@@ -82,6 +107,17 @@
     color: var(--blue-50);
   }
 
+/* Buttons */
+.button-primary {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  background-color: var(--blue-50);
+  border-radius: var(--rounded);
+  color: var(--white);
+  padding: 16px 24px;
+}
+
 /* Header */
 .menu {
   max-width: var(--maximum);
@@ -92,6 +128,8 @@
   display: block;
 }
 
+#new-listing {padding: 18px 0;}
+
 /* Main */
 body {
   background-color: var(--beige-10);
@@ -100,19 +138,51 @@ body {
 svg.icon {
   width: 24px;
 	height: 24px;
+  display: inline-block;
 }
 
 .hero {
+  max-width: var(--maximum);
   height: 480px;
+  margin: 0 auto;
 }
 
 /* Footer */
 footer {
-  max-width: var(--maximum);
-  margin: 0 auto;
-  padding: 48px 16px;
   background-color: var(--beige-20);
-}
+  }
+  footer ul {
+    max-width: var(--maximum);
+    margin: 0 auto;
+    padding: 48px 32px;
+  }
+  footer p {margin-bottom: 24px;}
+
+.signature-text {display: block;}
+
+.personal-logo {
+  height: 24px;
+  width: 104px;
+  margin: 24px 0 0 0;
+  display: inline-block;
+  }
+  .personal-logo svg {float:left;}
+  .personal-logo svg:nth-child(2) {margin: 0 16px;}
+
 .square{fill:#f23b55;}
 .circle{fill:#009de6;}
 .triangle{fill:#ffd200;}
+
+/* Above Mobile */
+@media screen and (min-width: 768px){
+  footer ul{display: flex;}
+
+  footer p:last-child {margin-bottom: 0;}
+
+  #about {flex-basis: 50%;}
+
+  #signature {
+    flex-basis: 50%;
+    text-align: right;
+  }
+}
