@@ -1,12 +1,118 @@
+/* Sizing */
+:root{
+  --maximum: 1280px;
+  --bp-mobile: 768px;
+}
+
+.left {float: left;}
+.right {float: right;}
+
 /* Colors */
+:root{
+  --beige-10: #FDFAF0;
+  --beige-20: #F6F2E5;
+  --beige-30: #E3E7BE;
+
+  --gray-80: #2D3536;
+  --gray-70: #2D474C;
+
+  --blue-50: #004FE8;
+
+  --pastel-blue: #A6D1EF;
+  --pastel-grape: #AAB8EA;
+  --pastel-purple: #C3AAED;
+  --pastel-pink: #E5A6EF;
+  --pastel-red: #EAAAB6;
+  --pastel-orange: #EDBEAA;
+  --pastel-yellow: #E9EAAA;
+  --pastel-lime: #BFEAAA;
+  --pastel-turquoise: #AAEDD5;
+}
 
 /* Typography */
+  body {
+    color: var(--gray-70);
+    font-weight: 400;
+  }
+
+  .align-left {text-align: left;}
+  .align-center {text-align: center;}
+  .align-right {text-align: right;}
+
+  .text-xxxxl{
+    font-size: 64px;
+    line-height: normal;
+  }
+  .text-xxxl{
+    font-size: 48px;
+    line-height: normal;
+  }
+  .text-xxl{
+    font-size: 36px;
+    line-height: normal;
+  }
+  .text-xl{
+    font-size: 28px;
+    line-height: normal;
+  }
+  .text-l{
+    font-size: 20px;
+    line-height: normal;
+  }
+  .text-body{
+    font-size: 16px;
+    line-height: normal;
+  }
+  .text-s{
+    font-size: 14px;
+    line-height: normal;
+  }
+
+  .header {
+    color: var(--gray-80);
+    font-weight: 900;
+  }
+  .subheader {
+    color: var(--gray-70);
+    font-weight: 900;
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--blue-50);
+  }
 
 /* Header */
+.menu {
+  max-width: var(--maximum);
+  margin: 0 auto;
+  padding: 0 16px;
+  height: 56px;
+  line-height: 56px;
+  display: block;
+}
 
 /* Main */
+body {
+  background-color: var(--beige-10);
+}
+
+svg.icon {
+  width: 24px;
+	height: 24px;
+}
+
+.hero {
+  height: 480px;
+}
 
 /* Footer */
+footer {
+  max-width: var(--maximum);
+  margin: 0 auto;
+  padding: 48px 16px;
+  background-color: var(--beige-20);
+}
 .square{fill:#f23b55;}
 .circle{fill:#009de6;}
 .triangle{fill:#ffd200;}
