@@ -11,8 +11,25 @@
 .center {
   margin-left: auto;
   margin-right: auto;
-  }
-  .clear {clear: both;}
+}
+
+.top-24 {margin-top: 24px;}
+.top-16 {margin-top: 16px;}
+
+.bottom-24 {margin-bottom: 24px;}
+.bottom-16 {margin-bottom: 16px;}
+
+.block {
+  display: block;
+}
+
+.flex {display: flex;}
+.flex-down {
+  display: flex;
+  flex-direction: column;
+}
+.flex-align-center {justify-content: center;}
+
 
 /* Colors */
 :root{
@@ -116,6 +133,7 @@
   border-radius: var(--rounded);
   color: var(--white);
   padding: 16px 24px;
+  height: 24px;
 }
 
 /* Header */
@@ -147,6 +165,36 @@ svg.icon {
   margin: 0 auto;
 }
 
+#grid {
+  max-width: var(--maximum);
+  margin: 0 auto 16px auto;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#grid li {
+  height: 352px;
+  width: 320px;
+  min-width: 320px;
+  flex: 1 1 1;
+}
+
+#grid li a {
+  display: block;
+  padding: 32px 32px 0 32px;
+  margin: 0 16px 32px 16px;
+  border-radius: var(--rounded);
+}
+#grid li:nth-child(9n-8) a {background-color: var(--pastel-blue);}
+#grid li:nth-child(9n-7) a {background-color: var(--pastel-grape);}
+#grid li:nth-child(9n-6) a {background-color: var(--pastel-purple);}
+#grid li:nth-child(9n-5) a {background-color: var(--pastel-pink);}
+#grid li:nth-child(9n-4) a {background-color: var(--pastel-red);}
+#grid li:nth-child(9n-3) a {background-color: var(--pastel-orange);}
+#grid li:nth-child(9n-2) a {background-color: var(--pastel-yellow);}
+#grid li:nth-child(9n-1) a {background-color: var(--pastel-lime);}
+#grid li:nth-child(9n) a {background-color: var(--pastel-turquoise);}
+
 /* Footer */
 footer {
   background-color: var(--beige-20);
@@ -175,6 +223,9 @@ footer {
 
 /* Above Mobile */
 @media screen and (min-width: 768px){
+  #grid li a {
+    height: 288px;
+
   footer ul{display: flex;}
 
   footer p:last-child {margin-bottom: 0;}
@@ -185,4 +236,14 @@ footer {
     flex-basis: 50%;
     text-align: right;
   }
+}
+
+@media screen and (max-width: 1279px){
+  #grid li {width: 33.3%;}
+}
+@media screen and (max-width: 959px){
+  #grid li {width: 50%;}
+}
+@media screen and (max-width: 767px){
+  #grid li {width: 100%;}
 }
