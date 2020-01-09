@@ -204,6 +204,10 @@ svg.icon {
   #grid li:nth-child(9n-1) a {background-color: var(--pastel-lime);}
   #grid li:nth-child(9n) a {background-color: var(--pastel-turquoise);}
 
+  #grid li a:visited h2 {
+    var(--gray-70);
+  }
+
   #grid li a .company-name {color: var(--gray-70);}
   #grid li a .tag {
     color: var(--gray-70);
